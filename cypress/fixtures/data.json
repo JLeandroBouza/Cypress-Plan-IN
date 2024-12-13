@@ -1,0 +1,14 @@
+{
+  "Usuarios": [
+    { "email": "pedritoaldas2@gmail.com", "password": "oem$TP5" },
+    { "email": "velezmarcocontacto@gmail.com", "password": "fito$TP6" }
+  ],
+  "Productores": [
+    { "email": "sanchezangelbarraco@gmail.com", "password": "A%lco6$e" },
+    { "email": "lorenita16tat@gmail.com", "password": "A%ldo1se" },
+    { "email": "gabymoratrabajo@gmail.com", "password": "A%lco6$e" }
+  ],
+  "Administrador": {
+    "email": "makoHartwood@gmail.com", "password": "Makondo$05"
+  }
+}
