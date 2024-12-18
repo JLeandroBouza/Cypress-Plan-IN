@@ -1,5 +1,6 @@
 import { homepage } from "../pages/home";
 import { registropage } from "../pages/registro";
+import { loginpage } from "../pages/login";
 import {jsondata} from "../fixtures/jsondata.json";
 
 
@@ -47,4 +48,51 @@ describe('Pruebas E2E sobre Aplicación Web Plant - IN : Registro de Usuarios',(
 
   })
 
+  it('Registro Incorrecto: Campo Nombre Vacío | Mostrar Tooltips', () =>{
+
+    registropage.registroIncorrectoNombre(datos.apellido,datos.email)
+  })
+
+  it('Registro Incorrecto: Campo Apellido Vacío | Mostrar Tooltips', () =>{
+
+    registropage.registroIncorrectoApellido(datos.nombre,datos.email)
+  })
+
+  it('Registro Incorrecto: Campo Email Vacío | Mostrar Tooltips', () =>{
+
+    registropage.registroIncorrectoEmail(datos.nombre,datos.apellido)
+  })
+
+  it('Registro Incorrecto: Campo Ciudad Vacío | Mostrar Tooltips', () =>{
+
+    registropage.registroIncorrectoCiudad(datos.nombre,datos.apellido,datos.email)
+  })
+
+  it('Registro Incorrecto: Campo Provincia Vacío | Mostrar Tooltips', () =>{
+
+    registropage.registroIncorrectoProvincia(datos.nombre,datos.apellido,datos.email)
+  })
+
+  it('Registro Incorrecto: Campo Contraseña Vacío | Mostrar Tooltips', () =>{
+
+    registropage.registroIncorrectoContraseña(datos.nombre,datos.apellido,datos.email)
+  })
+
+  it('Registro Incorrecto: Campo Confirmar Contraseña Vacío | Mostrar Tooltips', () =>{
+
+    registropage.registroIncorrectoConfirmarContraseña(datos.nombre,datos.apellido,datos.email)
+  })
+
+})
+
+describe('Pruebas E2E sobre Aplicación Web Plant - IN : Login de Usuarios',() =>{
+
+  it('Validar el ingreso al formulario de Login',() =>{
+
+    homepage.ingresarLogin()
+    loginpage.loginExitoso()
+
+  })
+
+  
 })

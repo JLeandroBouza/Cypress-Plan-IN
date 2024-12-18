@@ -41,6 +41,11 @@ export class homePage {
         cy.url().should('eq', 'https://plant-in.netlify.app/register')
     }
 
+    ingresarLogin(){
+        cy.xpath(this.botonIngresar).click()
+        cy.url().should('eq', 'https://plant-in.netlify.app/login')
+    }
+
 }
 
 export const homepage = new homePage()
