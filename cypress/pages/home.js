@@ -36,6 +36,11 @@ export class homePage {
         cy.get(this.botonTwitter).should('be.visible')
     }
 
+    ingresarRegistro(){
+        cy.xpath(this.botonRegistrate).click()
+        cy.url().should('eq', 'https://plant-in.netlify.app/register')
+    }
+
 }
 
 export const homepage = new homePage()
